@@ -7,9 +7,12 @@ import {rollup} from 'rollup';
 import memory from 'rollup-plugin-memory';
 import uglify from 'rollup-plugin-uglify';
 
+import locales from '../custom.js';
+
 const DEFAULT_LOCALE = 'en';
 
 const cldrData = extractCLDRData({
+    locales,
     pluralRules   : true,
     relativeFields: true,
 });
