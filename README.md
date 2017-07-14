@@ -1,0 +1,1 @@
+This is the built version of the package. It also has intl-messageformat as a peer-dependency instead of a dependency. This avoids a weird bug where a nested node_modules would be installed with only the intl-messageformat package inside of it, installing it twice in the same project.
