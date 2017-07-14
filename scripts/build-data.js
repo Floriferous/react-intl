@@ -7,7 +7,8 @@ import {rollup} from 'rollup';
 import memory from 'rollup-plugin-memory';
 import uglify from 'rollup-plugin-uglify';
 
-import locales from '../custom.js';
+var locales = require('../custom.js').locales;
+
 
 const DEFAULT_LOCALE = 'en';
 
