@@ -3064,7 +3064,7 @@ function getNamedFormat(formats, type, name) {
     }
 
     {
-        console.error('[React Intl] No ' + type + ' format named: ' + name);
+        //console.error('[React Intl] No ' + type + ' format named: ' + name);
     }
 }
 
@@ -3083,7 +3083,7 @@ function formatDate(config, state, value) {
         return state.getDateTimeFormat(locale, filteredOptions).format(date);
     } catch (e) {
         {
-            console.error('[React Intl] Error formatting date.\n' + e);
+            //console.error('[React Intl] Error formatting date.\n' + e);
         }
     }
 
@@ -3110,7 +3110,7 @@ function formatTime(config, state, value) {
         return state.getDateTimeFormat(locale, filteredOptions).format(date);
     } catch (e) {
         {
-            console.error('[React Intl] Error formatting time.\n' + e);
+            //console.error('[React Intl] Error formatting time.\n' + e);
         }
     }
 
@@ -3140,7 +3140,7 @@ function formatRelative(config, state, value) {
         });
     } catch (e) {
         {
-            console.error('[React Intl] Error formatting relative time.\n' + e);
+            //console.error('[React Intl] Error formatting relative time.\n' + e);
         }
     } finally {
         updateRelativeFormatThresholds(oldThresholds);
@@ -3163,7 +3163,7 @@ function formatNumber(config, state, value) {
         return state.getNumberFormat(locale, filteredOptions).format(value);
     } catch (e) {
         {
-            console.error('[React Intl] Error formatting number.\n' + e);
+            //console.error('[React Intl] Error formatting number.\n' + e);
         }
     }
 
@@ -3181,7 +3181,7 @@ function formatPlural(config, state, value) {
         return state.getPluralFormat(locale, filteredOptions).format(value);
     } catch (e) {
         {
-            console.error('[React Intl] Error formatting plural.\n' + e);
+            //console.error('[React Intl] Error formatting plural.\n' + e);
         }
     }
 
@@ -3221,7 +3221,7 @@ function formatMessage(config, state) {
             formattedMessage = formatter.format(values);
         } catch (e) {
             {
-                console.error('[React Intl] Error formatting message: "' + id + '" for locale: "' + locale + '"' + (defaultMessage ? ', using default message as fallback.' : '') + ('\n' + e));
+                //console.error('[React Intl] Error formatting message: "' + id + '" for locale: "' + locale + '"' + (defaultMessage ? ', using default message as fallback.' : '') + ('\n' + e));
             }
         }
     } else {
@@ -3231,7 +3231,7 @@ function formatMessage(config, state) {
             // default locale, and a default message is in the source.
             if (!defaultMessage || locale && locale.toLowerCase() !== defaultLocale.toLowerCase()) {
 
-                console.error('[React Intl] Missing message: "' + id + '" for locale: "' + locale + '"' + (defaultMessage ? ', using default message as fallback.' : ''));
+                //console.error('[React Intl] Missing message: "' + id + '" for locale: "' + locale + '"' + (defaultMessage ? ', using default message as fallback.' : ''));
             }
         }
     }
@@ -3243,14 +3243,14 @@ function formatMessage(config, state) {
             formattedMessage = _formatter.format(values);
         } catch (e) {
             {
-                console.error('[React Intl] Error formatting the default message for: "' + id + '"' + ('\n' + e));
+                //console.error('[React Intl] Error formatting the default message for: "' + id + '"' + ('\n' + e));
             }
         }
     }
 
     if (!formattedMessage) {
         {
-            console.error('[React Intl] Cannot format message: "' + id + '", ' + ('using message ' + (message || defaultMessage ? 'source' : 'id') + ' as fallback.'));
+            //console.error('[React Intl] Cannot format message: "' + id + '", ' + ('using message ' + (message || defaultMessage ? 'source' : 'id') + ' as fallback.'));
         }
     }
 
